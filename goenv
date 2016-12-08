@@ -1,0 +1,7 @@
+#! /bin/bash
+env=`pwd`
+if [ $1 ] && [ -d "$env"/$1 ]; then
+    env=$env/$1:$env
+fi
+
+export GOPATH=$env
